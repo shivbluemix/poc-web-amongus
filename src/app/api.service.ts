@@ -11,7 +11,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  sendMessage(message: string): Observable<Message> {
-    return this.http.post<Message>(this.apiUrl, { message: message });
+  sendMessage(message: string): Observable<string> {
+    return this.http.post<string>(this.apiUrl, { message: message });
   }
 }

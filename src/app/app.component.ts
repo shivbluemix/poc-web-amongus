@@ -14,8 +14,8 @@ export class AppComponent {
   constructor(private apiService: ApiService) {}
 
   onSubmit() {
-    this.apiService.sendMessage(this.message).subscribe((response: Message) => {
-      this.output = response.content; 
+    this.apiService.sendMessage(this.message).subscribe((response: string) => {
+      this.output = response; 
     }, error => {
       this.output = 'Error fetching data';
     });
